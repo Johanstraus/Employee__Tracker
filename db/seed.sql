@@ -1,22 +1,39 @@
-USE company_db;
+use roster_db;
 
-INSERT INTO department (name)
-VALUES ("Sales"),
-        ("Human Resources"),
-        ("Management"),
-        ("Warehouse"),
-        ("Accounting");
+INSERT INTO department
+    (name)
+    VALUES
+        ('Shipping'),
+        ('Sales'),
+        ('Marketing'),
+        ('Legal'),
+        ('Accounting');
 
-INSERT INTO role (title, salary, department_id)
-VALUES ("Regional Manager", 100000, 1),
-("HR Representative", 80000, 2),
-("Truck Driver", 60000, 4),
-("Financial Analyst", 80000, 5),
-("Senior Sales Advisor",  90000, 1),
-("Junior Sales Advisor", 75000, 1);
+INSERT INTO role
+    (title, salary, department_id)
+VALUES
+    ('Warehouse Manager', 90000, 1),
+    ('Truck Driver', 70000, 1),
+    ('Head of Sales', 100000, 2),
+    ('Salesperson', 50000, 2),
+    ('Head of Marketing', 100000, 3),
+    ('Marketing Agent', 60000, 3),
+    ('Head of Legal', 110000, 4),
+    ('Lawyer', 70000, 4),
+    ('Head of Accounting', 120000, 5),
+    ('Accountant', 90000, 5);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Michael", "Scott", 1, 1),
-("Toby", "Flenderson", 2, 1),
-("Tuna", "Halpert", 5, 1),
-("Dwight", "Schrute", 6, 1);
+INSERT INTO employee
+    (first_name, last_name, role_id, manager_id)
+VALUES
+    ('Kyle', 'Myers', 1, NULL),
+    ('John', 'Smith', 2, 1),
+    ('Matt', 'Morgan', 4, NULL),
+    ('Jenn', 'Stills', 5, 3),
+    ('Will', 'Yergin', 6, NULL),
+    ('Alex', 'Connor', 3, 5),
+    ('Renato', 'Bazan', 7, NULL),
+    ('Justin', 'Herbert', 8, 7);
+    
+    
+    
